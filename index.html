@@ -36,8 +36,7 @@
       }
 
       /* Firefox */
-      input[type="number"] {
-        -moz-appearance: textfield;
+      input {
         box-sizing: border-box;
         padding: 1rem;
         font-size: 1.2rem;
@@ -50,38 +49,28 @@
     <main
       class="card_container h-full bg-white shadow-2xl rounded-lg box-border p-10 rounded-br-[8rem] font-bold flex flex-col gap-4 md:w-1/2 w-[80%]"
     >
-      <section class="input_containers flex flex-row h-24 gap-2">
-        <label class="flex flex-col h-full gap-2 text-gray-500">
+      <section class="input_containers flex flex-row min-h-24 gap-2">
+        <label class="flex flex-col gap-2 text-gray-500">
           DAY
           <input
             id="day_input"
-            class="border-solid border-2 border-grey grow rounded-lg font-bold text-black w-full"
-            type="number"
-            max="31"
-            min="1"
-            z
+            class="border-solid border-2 border-grey rounded-lg font-bold text-black w-full box-border px-2 h-16"
           />
           <span></span>
         </label>
-        <label class="flex flex-col h-full gap-2 text-gray-500">
+        <label class="flex flex-col gap-2 text-gray-500">
           MONTH
           <input
             id="month_input"
-            type="number"
-            max="12"
-            min="1"
-            class="border-solid border-2 border-grey grow rounded-lg font-boldtext-black w-full"
+            class="border-solid border-2 border-grey rounded-lg font-boldtext-black w-full box-border px-2 h-16"
           />
           <span></span>
         </label>
-        <label class="flex flex-col h-full gap-2 text-gray-500">
+        <label class="flex flex-col gap-2 text-gray-500">
           YEAR
           <input
             id="year_input"
-            type="number"
-            min="1805"
-            max="2023"
-            class="border-solid border-2 border-grey grow rounded-lg font-bold text-black w-full"
+            class="border-solid border-2 border-grey rounded-lg font-bold text-black w-full box-border px-2 h-16"
           />
           <span></span>
         </label>
