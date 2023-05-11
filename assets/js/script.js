@@ -44,17 +44,21 @@ const DateOfBirth = new Proxy(
           new Date().getTime() -
           new Date(`${target.month}/${target.day}/${target.year}`).getTime();
         numberOfDays /= 1000 * 3600 * 24;
+        numberOfDays = Math.ceil(numberOfDays);
+        console.log(numberOfDays);
         ageInYearsPreviewContainer.textContent = Math.floor(numberOfDays / 365)
           .toString()
           .padStart(2, 0);
 
         numberOfDays %= 365;
+        console.log(numberOfDays);
 
-        ageInMontsPreviewContainer.textContent = Math.floor(numberOfDays / 12)
+        ageInMontsPreviewContainer.textContent = Math.floor(numberOfDays / 30)
           .toString()
           .padStart(2, 0);
 
-        numberOfDays %= 12;
+        numberOfDays %= 30;
+        console.log(numberOfDays);
 
         ageInDaysPreviewContainer.textContent = Math.ceil(numberOfDays)
           .toString()
